@@ -47,6 +47,8 @@ jobs:
         run: |
           npm install
           npm install -g vitepress
+          npm install busuanzi.pure.js
+          npm install medium-zoom
       - name: Build with VitePress
         run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
