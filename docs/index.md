@@ -14,8 +14,8 @@ hero:
       text: Getting Started
       link: /guide/index.md
     - theme: alt
-      text: Official Website
-      link: https://amethyst.icu/
+      text: Official Website(Old)
+      link: https://mc.starryfun.icu/
 
 features:
   - title: 贸易系统
