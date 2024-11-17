@@ -16,3 +16,14 @@
   - **请求网站** - 请求网站并获取响应
   - **文字转图片** - 在图片(你的头像)上绘制文字并获取结果
   - **NapCat 语音输出** - NapCat 语音输出
+## Thanks to
+  - [Starry-Sky-World](https://github.com/Starry-Sky-World)
+  - [AmethystCraft-DevTeam](https://github.com/AmethystCraft-DevTeam)
+  - [Old-Dream321](https://github.com/old-dream321)
+  - [HarcicYang](https://github.com/HarcicYang)
+  > We thank all the contributors for their contributions to the development of this bot.
+  > 我们感谢所有贡献者为这个机器人开发所做的贡献。
+## Contact
+  - QQ Group: 554134296
+  - E-mail: usr1@starryfun.icu
+  - Github: [AmethystCraft-DevTeam](https://github.com/AmethystCraft-DevTeam)
