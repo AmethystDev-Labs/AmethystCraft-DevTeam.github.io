@@ -23,6 +23,12 @@
   - [HarcicYang](https://github.com/HarcicYang)
   > We thank all the contributors for their contributions to the development of this bot.
   > 我们感谢所有贡献者为这个机器人开发所做的贡献。
+## Projects used during the development
+  - [old-dream321/revKimi](https://github.com/old-dream321/revKimi) - Reverse [KimiAI](https://kimi.ai) API
+  - [HarcicYang/rev_Hunyuan](https://github.com/HarcicYang/rev_Hunyuan) - Reverse [Tencent HunYuan](https://hunyuan.tencent.com) API
+  - [NoneBot/nonebot2](https://github.com/nonebot/nonebot2) - A fast, powerful and easy-to-use Python 3.7+ QQ bot framework.
+  - [NapNeko/NapCatQQ](https://github.com/NapNeko/NapCat) - NapCatQQ is a modern implementation of the Bot protocol based on NTQQ.
+  - [pyppeteer/pyppeteer](https://github.com/pyppeteer/pyppeteer) - A library to control headless chrome or chromium.
 ## Contact
   - QQ Group: 554134296
   - E-mail: usr1@starryfun.icu
