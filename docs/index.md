@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: Official Website(Old)
       link: https://mc.starryfun.icu/
+    - theme: alt
+      text: Bot Usage
+      link: /Bot/index.md
 
 features:
   - title: 贸易系统
