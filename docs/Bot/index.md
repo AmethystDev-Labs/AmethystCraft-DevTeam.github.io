@@ -16,6 +16,9 @@
   - **请求网站** - 请求网站并获取响应
   - **文字转图片** - 在图片(你的头像)上绘制文字并获取结果
   - **NapCat 语音输出** - NapCat 语音输出
+## Admin Command
+  - **/about** - About the bot
+  - Any more...
 ## Thanks to
   - [Starry-Sky-World](https://github.com/Starry-Sky-World)
   - [AmethystCraft-DevTeam](https://github.com/AmethystCraft-DevTeam)
