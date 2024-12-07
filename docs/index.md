@@ -14,8 +14,8 @@ hero:
       text: Getting Started
       link: /guide/index.md
     - theme: alt
-      text: Official Website(Old)
-      link: https://mc.starryfun.icu/
+      text: 官方网站
+      link: https://amethyst.icu/
     - theme: alt
       text: Bot Usage
       link: /Bot/index.md
@@ -23,19 +23,7 @@ hero:
 features:
   - title: 贸易系统
     icon: 💰
-    details: 正在内部编写
-    link: "#"
-  - title: AmethystBot - 紫水晶Bot
-    icon: 🤖
-    details: 部分功能完成
-    link: "#"
-  - title: QQ群
-    icon: 🧩
-    details: （￣︶￣）↗　554134296
-    link: "https://qm.qq.com/cgi-bin/qm/qr?k=-vaEaTl53xPqfY3uNpi6C6ZKHCcjAG1J&jump_from=webapi&qr=1"
-  - title: 夜幕之下
-    icon: 🌙
-    details: 三九永远滴神！！！！
-    link: "#"
+    details: Latest 3.7.4
+    link: "/plugins/TradeSystem.md"
 ---
 <DataPanel />
