@@ -8,7 +8,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '主页', link: '/' },
-      { text: '开始', link: '/guide/index.md' }
+      { text: '开始', link: '/guide/index.md' },
+      { text: '插件文档', items: [
+        { text: "TradeSystem", link: "/plugins/TradeSystem.md"}
+      ]}
     ],
 
     sidebar: {
@@ -18,6 +21,14 @@ export default defineConfig({
           items: [
             { text: '关于服务器', link: '/guide/index.md' },
             { text: '服务器规划', link: '/guide/server-features.md' },
+          ]
+        }
+      ],
+      '/plugins/': [
+        {
+          text: '插件',
+          items: [
+            { text: 'TradeSystem', link: '/plugins/TradeSystem.md' },
           ]
         }
       ]
