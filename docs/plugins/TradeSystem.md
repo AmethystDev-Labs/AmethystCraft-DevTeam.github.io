@@ -1,4 +1,4 @@
-# TradeCilent - Minecraft 商城与交易插件<Badge type="tip" text="^1.20.6" />
+# TradeCilent - Minecraft 商城与交易插件<Badge type="tip" text="Latest: 3.7.4" />
 
 
 
