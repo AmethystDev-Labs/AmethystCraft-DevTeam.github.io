@@ -25,7 +25,9 @@ jobs:
                   node-version: '16'  # 你可以根据需要选择其他版本
 
             - name: Install dependencies
-              run: npm install
+              run: |
+                npm install
+                npm install vitepress
 
             - name: Build documentation
               run: npm run docs:build
