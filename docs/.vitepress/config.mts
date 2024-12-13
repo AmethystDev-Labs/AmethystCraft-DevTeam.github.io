@@ -11,7 +11,8 @@ export default defineConfig({
       { text: '开始', link: '/guide/index.md' },
       { text: '插件文档', items: [
         { text: "TradeSystem", link: "/plugins/TradeSystem.md"}
-      ]}
+      ]},
+      { text: '团队', link: "/team/index.md"}
     ],
 
     sidebar: {
