@@ -22,6 +22,8 @@ jobs:
                 npm install
                 npm install vitepress
             NODEJS_VERSION: '16'  # 你需要安装的Node.js版本
+            
+            # 剩下几个变量请在Secrets中添加CLOUDFLARE_API_TOKEN和CLOUDFLARE_ACCOUNT_ID
         
         name: Publish to Cloudflare Pages
         steps:
