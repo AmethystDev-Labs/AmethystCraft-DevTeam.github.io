@@ -14,8 +14,9 @@ jobs:
         permissions:
             contents: read
             deployments: write
-        env: 
-            PROJECT_NAME: "atc-vp-gh-cf-docs"
+        env:   #  设置Cloudflare项目名字与构建后的目录
+            PROJECT_NAME: "atc-vp-gh-cf-docs"   # 项目名字
+            BUILD_DIR: "./docs/.vitepress/dist"  # 构建后的目录
         name: Publish to Cloudflare Pages
         steps:
             - name: Checkout
@@ -35,7 +36,7 @@ jobs:
               run: npm run docs:build
 
             - name: Deploy to Cloudflare Pages
-              run: npx wrangler@3 pages deploy "./docs/.vitepress/dist" --project-name="${{ env.PROJECT_NAME }}" --branch="main" --commit-dirty=true
+              run: npx wrangler@3 pages deploy "${{ env.BUILD_DIR }}" --project-name="${{ env.PROJECT_NAME }}" --branch="main" --commit-dirty=true
               env:
                   CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
                   CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
