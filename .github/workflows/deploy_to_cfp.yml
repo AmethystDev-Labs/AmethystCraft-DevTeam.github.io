@@ -11,12 +11,18 @@ on:
 jobs:
     publish:
         runs-on: ubuntu-latest
-        permissions:
+        permissions:  # 设置权限，请勿修改
             contents: read
             deployments: write
         env:   #  设置Cloudflare项目名字与构建后的目录
             PROJECT_NAME: "atc-vp-gh-cf-docs"   # 项目名字
             BUILD_DIR: "./docs/.vitepress/dist"  # 构建后的目录
+            BUILD_COMMAND: "npm run docs:build"  # 构建命令
+            INSTALL_DEPENDENCIES: |  # 安装依赖命令
+                npm install
+                npm install vitepress
+            NODEJS_VERSION: '16'  # 你需要安装的Node.js版本
+        
         name: Publish to Cloudflare Pages
         steps:
             - name: Checkout
@@ -25,15 +31,13 @@ jobs:
             - name: Set up Node.js and npm
               uses: actions/setup-node@v3
               with:
-                  node-version: '16'  # 你可以根据需要选择其他版本
+                  node-version: ${{ env.NODEJS_VERSION }}  # 你可以根据需要选择其他版本
 
             - name: Install dependencies
-              run: |
-                npm install
-                npm install vitepress
+              run: ${{ env.INSTALL_DEPENDENCIES }}
 
             - name: Build documentation
-              run: npm run docs:build
+              run: ${{ env.BUILD_COMMAND }}  # 运行构建命令
 
             - name: Deploy to Cloudflare Pages
               run: npx wrangler@3 pages deploy "${{ env.BUILD_DIR }}" --project-name="${{ env.PROJECT_NAME }}" --branch="main" --commit-dirty=true
