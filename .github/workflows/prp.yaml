@@ -1,0 +1,41 @@
+name: Create Issue on Pull Request
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  create_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get changed files and create issue content
+        id: get_changes
+        run: |
+          # 获取 PR 的变更文件列表，并格式化为字符串
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | tr '\n' ', ')
+          echo "Changed files are: $CHANGED_FILES"
+          
+          # 创建 issue 内容
+          ISSUE_CONTENT="**更改的内容:**\n$CHANGED_FILES"
+          
+          # 输出到环境变量以供后续步骤使用
+          echo "issue_content<<EOF" >> $GITHUB_ENV
+          echo "$ISSUE_CONTENT" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Create an issue from the pull request 
+        id: create_issue 
+        uses: peter-evans/create-issue-from-file@v3 
+        with:
+            title : '${{ github.event.pull_request.title }} Issue 提交'
+            body : "${{ env.issue_content }}"
+            labels : 'Pull Request'
+
+      - name : Comment on the pull request with issue link 
+        run : |
+            ISSUE_URL="${{ steps.create_issue.outputs.issue_url }}"
+            echo "Creating comment on PR with issue link"
+            gh pr comment "${{ github.event.pull_request.number }}" --body="相关的Issue已创建：[$ISSUE_URL]($ISSUE_URL)"
