@@ -31,14 +31,6 @@ const members = [
     ]
   },
   {
-    avatar: 'http://q.qlogo.cn/headimg_dl?dst_uin=2105165021&spec=640&img_type=jpg',
-    name: 'Silence_cm_1',
-    title: '联合创始人/插件开发主力',
-    links: [
-      { icon: 'github', link: 'https://github.com/silent-cm-github' }
-    ]
-  },
-  {
     avatar: 'http://q.qlogo.cn/headimg_dl?dst_uin=3773898834&spec=640&img_type=jpg',
     name: 'Color111111',
     title: '联合创始人/插件or机器人测试',
